@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Express from 'express';
+const expressApp = Express();
+import strava from 'strava-v3'
+import http from 'http';
 
 class App extends Component {
   render() {
@@ -20,7 +24,11 @@ class App extends Component {
 }
 
 function LogIn() {
-  alert("hi")
+  
+  const client_id = '14088'
+ 
+  http.request('https://www.strava.com/oauth/authorize?client_id=' + client_id + '&response_type=code&redirect_uri=http://localhost:3000/access.html&scope=write&state=mystate&approval_prompt=force') 
+
 }
 
 export default App;

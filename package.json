@@ -6,8 +6,11 @@
     "react-scripts": "0.9.5"
   },
   "dependencies": {
+    "express": "^4.15.2",
+    "http": "0.0.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "strava-v3": "^1.12.1"
   },
   "scripts": {
     "start": "react-scripts start",
